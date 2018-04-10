@@ -40,5 +40,5 @@ gulp.task('nodemon', function (cb) {
   });
 
 gulp.task('watch', ['browser-sync'], function() {
-    gulp.watch(['/*.html', '/public/**/*.css', '/public/**/*.js']).on('change', browserSync.reload);
+    gulp.watch(['*.html', 'public/**/*.css', 'public/**/*.js']).on('change', browserSync.reload);
 });
