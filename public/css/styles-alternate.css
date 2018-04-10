@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI';
-    background-color: whitesmoke;
+    background-color: yellow;
 }
 
 header {
@@ -20,8 +20,8 @@ header p {
 .topHeader {
     display: flex;
     justify-content: space-between;
-    color: white;
-    background-color: black;
+    color: red;
+    background-color: lime;
 }
 
 .rightHeader {
@@ -45,9 +45,9 @@ article {
     height: fit-content;
     margin-bottom: 10px;
     padding: 10px;
-    border: 3px solid darkgray;
+    border: 3px solid blue;
     border-radius: 3px;
-    background-color: white;
+    background-color: fuchsia;
     text-align: center;
 }
 
@@ -87,8 +87,8 @@ article img {
 
 footer {
     padding: 10px;
-    color: white;
-    background-color: black;
+    color: red;
+    background-color: limegreen;
     text-align: right;
 }
 

@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="author" content="Lukas Brägger">
   <title>Ted's homepage</title>
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" title="default">
+  <link rel="alternate stylesheet" type="text/css" href="css/styles-alternate.css" title="alternate">
 
 </head>
 
 <body>
   <header class="topHeader">
-      <h1>Ted's memes</h1>
-      <p>Good memes to lighten up your day</p>
+    <div class="leftHeader">
+        <h1>Ted's memes</h1>
+        <p>Good memes to lighten up your day</p>
+    </div>
+    <div class="rightHeader">
+      <button onclick="switchColorMode()">Switch color mode</button>
+    </div>
   </header>
   
   <section>
@@ -90,5 +94,5 @@
   </footer>
 </body>
 
-  <script type="text/javascript" src="js/scripts.js" />
+  <script type="text/javascript" src="js/scripts.js"></script>
 </html>
