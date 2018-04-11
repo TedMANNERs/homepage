@@ -34,7 +34,7 @@ gulp.task('nodemon', function (cb) {
     })
     .on('restart', function () {
       setTimeout(function () {
-        reload({ stream: false });
+        browserSync.reload({ stream: true });
       }, 1000);
     });
   });
