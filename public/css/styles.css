@@ -71,17 +71,29 @@ article img {
     article {
         width: 100%;
     }
+    
+    article h2 {
+        font-size: 16pt;
+    }
 }
 
 @media screen and (min-width: 450px) { /* tablet devices */
     article {
         width: 42.5vw;
     }
+
+    article h2 {
+        font-size: 18pt;
+    }
 }
 
 @media screen and (min-width: 900px) { /* desktop devices */
     article {
         width: 30vw;
+    }
+    
+    article h2 {
+        font-size: 20pt;
     }
 }
 
