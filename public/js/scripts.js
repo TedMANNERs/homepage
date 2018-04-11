@@ -9,10 +9,11 @@ function switchColorMode() {
 function getStyleCookie() {
     var cookiePrefix = "style=";
     var cookies = document.cookie.split(";");
-    cookies.forEach(c => {
+    for (let i = 0; i < cookies.length; i++) {
+        const c = cookies[i];
         if(c.indexOf(cookiePrefix == 0))
             return c.substring(cookiePrefix.length, c.length);
-    });
+    }
 }
 
 function getActiveStyle() {
@@ -33,8 +34,10 @@ function setActiveStyle(title) {
         var titleAttribute = a.getAttribute("title");
         if(a.getAttribute("rel").indexOf("style") != -1 && titleAttribute) {
             a.disabled = true;
-            if(titleAttribute == title) 
+            if(titleAttribute == title) {
                 a.disabled = false;
+                document.cookie = "style=" + title + ";";
+            }
         }
     }
 }
@@ -43,9 +46,4 @@ window.onload = function(e) {
     var cookie = getStyleCookie();
     var title = cookie ? cookie : "default";
     setActiveStyle(title);
-}
-  
-window.onunload = function(e) {
-    var title = getActiveStyleSheet();
-  document.cookie = "style=" + title + ";";
 }
