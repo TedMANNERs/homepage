@@ -25,12 +25,35 @@ header p {
 }
 
 .rightHeader {
+    display: flex;
     align-self: flex-end;
 }
 
 .rightHeader button {
     text-align: center;
     padding: 5px;
+    margin: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    display: inline-block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+nav li a:hover {
+    background-color: gray;
 }
 
 section {
@@ -38,6 +61,11 @@ section {
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 20px;
+}
+
+.guestbook {
+    display: block;
+    margin: 20px;
 }
 
 article {

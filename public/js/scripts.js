@@ -173,3 +173,31 @@ function animloop() {
     draw();
     requestAnimFrame(animloop);
 }
+
+// =====================================
+// Slideshow
+// =====================================
+
+function previousImage() {
+    var slideshowImage = document.getElementById("slideshowImage");
+    var http = new XMLHttpRequest();
+    http.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            slideshowImage.src = this.responseText;
+        }
+    };
+    http.open("GET", "/previousImage?currentImage=" + slideshowImage.src, true);
+    http.send();
+}
+
+function nextImage() {
+    var slideshowImage = document.getElementById("slideshowImage");
+    var http = new XMLHttpRequest();
+    http.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            slideshowImage.src = this.responseText;
+        }
+    };
+    http.open("GET", "/nextImage?currentImage=" + slideshowImage.src, true);
+    http.send();
+}
