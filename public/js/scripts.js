@@ -46,6 +46,7 @@ window.onload = function(e) {
     var cookie = getStyleCookie();
     var title = cookie ? cookie : "default";
     setActiveStyle(title);
+    loadCanvas();
 }
 
 // =====================================
@@ -74,4 +75,28 @@ function nextImage() {
     };
     http.open("GET", "/nextImage?currentImage=" + slideshowImage.src, true);
     http.send();
+}
+
+// =====================================
+// Navigation
+// =====================================
+
+function showHome() {
+    var home = document.getElementById("homeContent").style.display = "flex";
+    var slideshow = document.getElementById("slideshowContent").style.display = "none";
+    var guestbook = document.getElementById("guestbookContent").style.display = "none";
+}
+
+function showGuestbook() {
+    var home = document.getElementById("homeContent").style.display = "none";
+    var slideshow = document.getElementById("slideshowContent").style.display = "none";
+    var guestbook = document.getElementById("guestbookContent").style.display = "flex";
+
+}
+
+function showSlideshow() {
+    var home = document.getElementById("homeContent").style.display = "none";
+    var slideshow = document.getElementById("slideshowContent").style.display = "flex";
+    var guestbook = document.getElementById("guestbookContent").style.display = "none";
+
 }

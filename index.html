@@ -8,8 +8,8 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css" title="default">
   <link rel="alternate stylesheet" type="text/css" href="css/styles-alternate.css" title="alternate">
 
-  <script src="js/scripts.js"></script>
   <script src="js/canvasScripts.js"></script>
+  <script src="js/scripts.js"></script>
 </head>
 
 <body>
@@ -21,16 +21,16 @@
     <div class="rightHeader">
         <nav>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/guestbook.html">Guestbook</a></li>
-            <li><a href="/slideshow.html">Slideshow</a></li>
+            <li><a onclick="showHome()">Home</a></li>
+            <li><a onclick="showGuestbook()">Guestbook</a></li>
+            <li><a onclick="showSlideshow()">Slideshow</a></li>
           </ul>
         </nav>
       <button onclick="switchColorMode()">Switch color mode</button>
     </div>
   </header>
   
-  <div class="content">
+  <div id="homeContent" class="content">
 
     <article>
       <header>
@@ -104,6 +104,23 @@
         <img src="images/americanChopperArgument.jpg" alt="American Chopper Meme - You cannot enter the same password twice"/>
     </article>
 
+  </div>
+  
+  <div id="slideshowContent" class="content slideshow">
+    <button onclick="previousImage()">&lt;</button>
+    <img id="slideshowImage" src="images/veryFastDoggo.jpg" alt="Slideshow image"/>
+    <button onclick="nextImage()">&gt;</button>
+  </div>
+
+  <div id="guestbookContent" class="content guestbook">
+    <h2>Guestbook</h2>
+    <form action="/addGuestbookEntry" method="post" target="_blank">
+      <p>Name</p>
+      <input type="text" name="name">
+      <p>Message</p>
+      <textarea name="message" rows="8" cols="50"></textarea>
+      <input type="submit" value="Submit">
+    </form>
   </div>
 
   <footer>

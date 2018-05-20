@@ -156,3 +156,11 @@ footer {
 footer p {
     margin: 0;
 }
+
+#slideshowContent {
+    display: none;
+}
+
+#guestbookContent {
+    display: none;
+}

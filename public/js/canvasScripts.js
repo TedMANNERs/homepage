@@ -1,10 +1,3 @@
-window.onload = function(e) {
-    var cookie = getStyleCookie();
-    var title = cookie ? cookie : "default";
-    setActiveStyle(title);
-    loadCanvas();
-}
-
 var particle_no = 25;
 var canvas, ctx, particles, endAngle;
 var isReverse = false;
