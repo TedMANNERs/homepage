@@ -61,7 +61,8 @@ function previousImage() {
             slideshowImage.src = this.responseText;
         }
     };
-    http.open("GET", "/previousImage?currentImage=" + slideshowImage.src, true);
+    var currentImageUrl = slideshowImage.src.split("/").slice(3).join("/");
+    http.open("GET", "/previousImage?currentImage=" + currentImageUrl, true);
     http.send();
 }
 
@@ -73,7 +74,8 @@ function nextImage() {
             slideshowImage.src = this.responseText;
         }
     };
-    http.open("GET", "/nextImage?currentImage=" + slideshowImage.src, true);
+    var currentImageUrl = slideshowImage.src.split("/").slice(3).join("/");
+    http.open("GET", "/nextImage?currentImage=" + currentImageUrl, true);
     http.send();
 }
 
