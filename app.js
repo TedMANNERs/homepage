@@ -26,14 +26,9 @@ app.post('/addGuestbookEntry', function(req, res) {
 app.get('/previousImage', function(req, res) {
     var url = req.query.currentImage;
     var newUrl = url.replace(/^[a-z]{4}\:\/{2}[a-z]{1,}\:[0-9]{1,4}.(.*)/, '$1');
-    console.log(url);
-    console.log(newUrl);
     var index = availableImages.indexOf(newUrl);
-    console.log(index);
-    console.log(availableImages);
     if(index <= 0)
         index = availableImages.length;
-    console.log(index);
     res.send(availableImages[index - 1]);
 });
 
