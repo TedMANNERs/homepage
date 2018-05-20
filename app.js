@@ -18,8 +18,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname + "/index.html")));
-app.get('/guestbook.html', (req, res) => res.sendFile(path.join(__dirname + "/guestbook.html")));
-app.get('/slideshow.html', (req, res) => res.sendFile(path.join(__dirname + "/slideshow.html")));
 
 app.post('/addGuestbookEntry', function(req, res) {
     res.send('Thanks for your guestbook entry, ' + req.body.name + '.');
