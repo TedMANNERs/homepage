@@ -68,6 +68,14 @@ section {
     margin: 20px;
 }
 
+.slideshow img {
+    max-width: 100%;
+}
+
+.slideshow button {
+    padding: 20px;
+}
+
 article {
     width: 30vw;
     height: fit-content;
@@ -103,6 +111,10 @@ article img {
     article h2 {
         font-size: 16pt;
     }
+
+    .topHeader {
+        flex-direction: column;
+    }
 }
 
 @media screen and (min-width: 450px) { /* tablet devices */
@@ -113,6 +125,10 @@ article img {
     article h2 {
         font-size: 18pt;
     }
+
+    .topHeader {
+        flex-direction: column;
+    }
 }
 
 @media screen and (min-width: 900px) { /* desktop devices */
@@ -122,6 +138,10 @@ article img {
     
     article h2 {
         font-size: 20pt;
+    }
+
+    .topHeader {
+        flex-direction: row;
     }
 }
 
